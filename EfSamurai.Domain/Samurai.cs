@@ -11,6 +11,9 @@ namespace EfSamurai.Domain
         public int? Weight { get; set; }
         public SpecialMove SpecialMove { get; set; }
         public List<Quote> Quotes { get; set; }
+        public Haircut Haircut { get; set; }
+        public SecretIdentity SecretIdentity { get; set; }
+
 
     }
 }

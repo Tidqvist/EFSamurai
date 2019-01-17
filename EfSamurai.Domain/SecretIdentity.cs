@@ -5,13 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace EfSamurai.Domain
-
 {
-    public class Quote
+    public class SecretIdentity
     {
         public int Id { get; set; }
-        public int SamuraiId { get; set; }
-        public string Message { get; set; }
-        public QuoteCategory Category { get; set; }
+        public int  SamuraiId { get; set; }
+        public string SecretName { get; set; }
     }
 }
