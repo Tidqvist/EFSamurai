@@ -4,14 +4,16 @@ using System;
 
 namespace EfSamurai.Data
 {
-public class SamuraiContext : DbContext
-{
-    public DbSet<Samurai> Samurais { get; set; }
-  
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public class SamuraiContext : DbContext
     {
-        optionsBuilder.UseSqlServer(
-          "Server = (localdb)\\mssqllocaldb; Database = EfSamurai;");
+        public DbSet<Samurai> Samurais { get; set; }
+        public DbSet<SpecialMove> SpecialMoves { get; set; }
+        public DbSet<Quote> Quotes { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(
+              "Server = (localdb)\\mssqllocaldb; Database = EfSamurai;");
+        }
     }
-}
 }
